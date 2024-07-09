@@ -20,7 +20,7 @@ all_data = get_dataset("HTTPS-clf-dataset.csv")
 
 X = all_data.drop(columns=['TYPE','DBI_BRST_BYTES','DBI_BRST_PACKETS','PKT_LENGTHS','PPI_PKT_DIRECTIONS','PKT_TIMES','DBI_BRST_TIME_START',
                             'DBI_BRST_TIME_STOP','DBI_BRST_DURATION','DBI_BRST_INTERVALS','TIME_INTERVALS',
-                        ])
+                        ]).iloc[:,1:]
 print(X)
 
 le = LabelEncoder()
